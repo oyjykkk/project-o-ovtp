@@ -62,10 +62,10 @@ export default defineConfig({
     lib: {
       // entry: resolve(__dirname, 'packages/index.ts'),
       entry: './packages/index.ts',
-      name: 'dolls',
+      name: 'hi-map',
       // formats: ['es', 'cjs'],
       // formats: ['es', 'umd', 'cjs'],
-      fileName: 'dolls',
+      fileName: 'hi-map',
     },
   },
 })

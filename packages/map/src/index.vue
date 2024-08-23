@@ -2,7 +2,7 @@
     <div ref="mapContainer" class="mapContainer"></div>
   </template>
   
-  <script setup lang="ts">
+  <script setup lang="ts" name="HiMap">
   // 使用适当的地图库，例如 Leaflet, Mapbox, 或者 Google Maps
   import L from "leaflet";
   import "leaflet/dist/leaflet.css";

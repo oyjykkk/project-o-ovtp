@@ -3,5 +3,5 @@
 ### 基础用法
 
 :::demo
-DMap/base
+HiMap/base
 :::

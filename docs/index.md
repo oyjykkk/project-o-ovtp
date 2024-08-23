@@ -1,24 +1,24 @@
 ---
 layout: home
 
-title: DOLLS
+title: HI-MAP
 # titleTemplate: 选项卡描述
 editLink: true
 lastUpdated: true
 hero:
-  name: DOLLS
+  name: HI-MAP
   text: 地图组件
   tagline: 基于Leaflet二次封装组件文档
   image:
-    src: /img/dolls-logo.png
-    alt: DOLLS
-  actions:
-    - theme: brand
-      text: 安装指南
-      link: /components/
-    - theme: brand
-      text: 组件预览
-      link: /components/DMap/base.md
+    src: /img/logo.png
+    alt: HI-MAP-LOGO
+  # actions:
+  #   - theme: brand
+  #     text: 安装指南
+  #     link: /components/
+  #   - theme: brand
+  #     text: 组件预览
+  #     link: /components/HiMap/base.md
 features:
   - icon: 🔨
     title: 优点1

@@ -1,5 +1,5 @@
 <template>
-  <d-map class="mapContainer"></d-map>
+  <hi-map class="mapContainer"></hi-map>
 </template>
 
 <script setup lang="ts">

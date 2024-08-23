@@ -7,11 +7,10 @@ import locale from "element-plus/es/locale/lang/zh-cn"
 // 图标并进行全局注册
 import * as ElementPlusIconsVue from "@element-plus/icons-vue"
 import { VPDemo } from "../vitepress"
-import "../../public/css/index.css"
 
 export default {
   ...DefaultTheme,
-  enhanceApp(ctx) {
+  async enhanceApp(ctx) {
     DefaultTheme.enhanceApp(ctx)
     // 注册ElementPlus
     ctx.app.use(ElementPlus, {
@@ -22,14 +21,12 @@ export default {
       ctx.app.component(key, component)
     }
     // 全局注册基础组件
-    // 引入地图组件库内部会用到windows，vitepress打包在node中执行，需要在mounted里面动态导入
-    ctx.app.mixin({
-      async mounted() {
-        import('../../../packages/index.ts').then(module => {
-          ctx.app.use(module.default)
-        })
-      }
-    })
+    // 引入地图组件库内部会用到windows，vitepress打包在node中执行
+    // @ts-ignore
+    if (!import.meta.env.SSR) {
+      const plugin = await import('../../../packages')
+      ctx.app.use(plugin.default)
+    }
 
     ctx.app.component("Demo", VPDemo)
     // try {

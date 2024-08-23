@@ -126,7 +126,7 @@ const copyCode = async () => {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 10;
+    z-index: 999;
     span {
       font-size: 14px;
       margin-left: 10px;

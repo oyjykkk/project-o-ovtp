@@ -1,10 +1,11 @@
-import DMap from "./map";
+import HiMap from "./map";
+import "leaflet/dist/leaflet.css";
 import type { Component, App } from "vue";
 
 const components: {
   [propName: string]: Component;
 } = {
-  DMap
+  HiMap
 };
 
 const installComponents = (app: App) => {
@@ -24,7 +25,7 @@ if (typeof window !== "undefined" && window.Vue) {
 }
 
 // 按需引入
-export { DMap };
+export { HiMap };
 
 export default {
   // 为了被Vue.use()方法安装
